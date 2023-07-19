@@ -1,0 +1,6 @@
+{
+  "appId": "app.vercel.huco",
+  "appName": "HuCo",
+  "webDir": "out",
+  "bundledWebRuntime": false
+}
