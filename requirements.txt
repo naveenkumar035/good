@@ -58,3 +58,4 @@ torch                        ==2.0.0
 tqdm                         ==4.65.0
 uritemplate                  ==4.1.1
 Werkzeug                     ==2.3.3
+tensorflow                   ==2.12.0
