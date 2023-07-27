@@ -3,7 +3,9 @@
     "version": 2,
     "builds": [
       { "src": "api/index.py", "use": "@vercel/python" },
-      { "src": "pages", "use": "@vercel/next" }
+      { "src": "pages", "use": "@vercel/next" },
+      {"src":"api/Lib/site-packages/tensorflow/python/_pywrap_tensorflow_internal.pyd", "use": "@vercel/git-lfs"}
+      {"src":"api/Lib/site-packages/~ensorflow/python/_pywrap_tensorflow_internal.pyd", "use": "@vercel/git-lfs"}
     ],
     "routes": [
       { "src": "/api/(.*)", "dest": "api/index.py" },
