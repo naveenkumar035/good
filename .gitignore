@@ -4,7 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
-api/Lib/
+api/Lib/site-packages/*
+!Lib/test/data/README.txt
 
 
 # testing
