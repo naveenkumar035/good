@@ -1,8 +1,8 @@
-import  Link  from 'next/link'
-import Feed from './components/Feed'
+import Head from "next/head"
+import Link from 'next/link'
+import Feed from "./components/Feed"
 import Nav from "./components/Nav"
 import Sidebar from "./components/Sidebar"
-import Head from "next/head"
 
 export default function Home() {
   return (
@@ -14,9 +14,9 @@ export default function Home() {
         <meta name="google-site-verification" content="y_rAeNB0KQgs0GDg8ajmkQtTPCp83t4TIZQTLIzzJ5g" />
         </Head>
         <Nav/>
-        <main className="bg-white h-[400px] min-h-screen flex max-w-[1500px] mx-auto" >
+        <main className="bg-white h-[400px] min-h-screen justify-center flex max-w-[1500px] mx-auto" >
          <Sidebar/>
-           <Feed/>
+         <Feed/>
        </main>
        </div>
      )

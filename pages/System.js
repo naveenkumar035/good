@@ -1,11 +1,10 @@
-import Head from "next/head";
-import { useState } from "react";
-import React from "react";
-import Image from "next/image";
-import { EyeIcon } from "@heroicons/react/solid";
 import { BeakerIcon } from "@heroicons/react/outline";
+import { EyeIcon } from "@heroicons/react/solid";
+import { useSession } from "next-auth/react";
+import Head from "next/head";
+import Image from "next/image";
+import React from "react";
 import SystemInput from "./components/SystemInput";
-import { useSession  } from "next-auth/react";
 
 
 function System(){
@@ -29,7 +28,7 @@ function System(){
             />     
         </div>
         <div className="flex">
-        <span className="  bg-[#35353f]  hidden xl:inline">
+        <span className="  bg-[#35353f]  hidden sm:block xl:inline">
         <div className=" hidden sm:block  flex-col min-w-max   ">
           <form className="flex  p-4">
             <input placeholder="search systems" className="flex p-1 bg-white rounded "/>

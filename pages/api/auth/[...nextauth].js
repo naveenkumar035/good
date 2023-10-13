@@ -1,13 +1,14 @@
+import admin from "firebase-admin";
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
-import admin from "firebase-admin";
 
 const serviceAccount = require('/huco.json');
 
+// Initialize Firebase app if it hasn't been already
 if (!admin.apps.length) {
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://huco-9f896-default-rtdb.firebaseio.com"
+    databaseURL: "https://huco-9f896-default-rtdb.firebaseio.com",
   });
 }
 
@@ -44,6 +45,10 @@ export const authOptions = {
     },
   },
   secret: process.env.JWT_SECRET,
+  session: {
+    // Use session cookies with a longer duration to remember users
+    maxAge: 30 * 24 * 60 * 60, // 30 days in seconds
+  },
 };
 
 export default NextAuth(authOptions);
