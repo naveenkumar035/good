@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-Lib/site-packages
+/Lib/site-packages
 
 
 # testing
